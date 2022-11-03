@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PASSWORD GENERATOR APP</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <script src="/static/js/main.js" defer></script>
+  </head>
+  <body>
+    <form id="passwordGeneratorForm" >
+      <div class="container">
+        <h2>Secure Password Generator</h2>
+        <div class="result__container">
+        <span id="result"></span><h3>{{resultPassword}}</h3>
+{#        <button id="copy">Copy</button>#}
+      </div>
+      <div class="options">
+        <div class="option">
+          <label>Length</label>
+          <input type="number" id="length" min="3" max="32" value="16" name="length">
+        </div>
+        <div class="option">
+          <label>Enable Uppercase</label>
+          <input type="checkbox" id="enableUppercase" name="enableUppercase"  checked>
+        </div>
+        <div class="option">
+          <label>Enable Lowercase</label>
+          <input type="checkbox" id="enableLowercase" name="enableLowercase" checked>
+        </div>
+        <div class="option">
+          <label>Enable Digits</label>
+          <input type="checkbox" id="enableDigits" name="enableDigits"  checked>
+        </div>
+        <div class="option">
+          <label>Enable Special</label>
+          <input type="checkbox" id="enableSpecial" name="enableSpecial">
+        </div>
+      </div>
+      <button class="btn" id="generate" type="submit" >Generate Password </button>
+      </div>
+    </form>
+  </body>
+</html>
