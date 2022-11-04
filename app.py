@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request
 import string
 import secrets
-import os
 
 app = Flask(__name__)
+
 
 globalUppercaseLetters = string.ascii_letters.upper()
 globalLowercaseLetters = string.ascii_letters.lower()
@@ -58,5 +58,4 @@ def index():
 
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 8080))
-    app.run(host='0.0.0.0', port=port)
+    app.run(debug=True, host='0.0.0.0')
